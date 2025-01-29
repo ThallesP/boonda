@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1738171882131,
+      "tag": "0000_mighty_stepford_cuckoos",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1738172476419,
+      "tag": "0001_foamy_leper_queen",
+      "breakpoints": true
+    }
+  ]
+}
