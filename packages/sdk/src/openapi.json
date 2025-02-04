@@ -1,0 +1,51 @@
+{
+  "openapi": "3.0.0",
+  "paths": {
+    "/me": {
+      "get": {
+        "operationId": "GetMeController_getMe",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Get me",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetMeResponse"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "GetMe"
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "Boonda API",
+    "description": "Uploads made easier",
+    "version": "1.0",
+    "contact": {}
+  },
+  "tags": [],
+  "servers": [],
+  "components": {
+    "schemas": {
+      "GetMeResponse": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "description": "The message of the response",
+            "example": "Hello, world!"
+          }
+        },
+        "required": [
+          "message"
+        ]
+      }
+    }
+  }
+}

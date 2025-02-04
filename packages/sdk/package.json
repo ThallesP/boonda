@@ -1,0 +1,17 @@
+{
+  "name": "@boonda/sdk",
+  "version": "0.0.0",
+  "private": true,
+  "main": "dist/openapi.js",
+  "types": "./src/index.ts",
+  "scripts": {
+    "dev": "orval --watch --config ./orval.config.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "orval": "^7.4.1"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.66.0"
+  }
+}

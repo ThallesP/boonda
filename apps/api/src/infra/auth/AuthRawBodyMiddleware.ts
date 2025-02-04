@@ -3,7 +3,7 @@ import { Request, Response, NextFunction } from "express";
 import * as express from "express";
 
 @Injectable()
-export class AuthRawMiddleware implements NestMiddleware {
+export class AuthRawBodyMiddleware implements NestMiddleware {
 	use(req: Request, res: Response, next: NextFunction) {
 		// Check if the route matches the desired pattern
 		if (req.baseUrl.startsWith("/api/auth")) {

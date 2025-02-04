@@ -1,28 +1,19 @@
-"use client";
+import { headers } from "next/headers";
+import { getMeControllerGetMe } from "@boonda/sdk";
+import { unauthorized } from "next/navigation";
 
-import { authClient } from "@/lib/auth-client";
+export default async function Home() {
+	const { status } = await getMeControllerGetMe({
+		headers: await headers(),
+	});
 
-export default function Home() {
-	const { data, error } = authClient.useSession();
+	if (status === 401) {
+		unauthorized();
+	}
 
 	return (
 		<div>
-			<div>
-				<p>{JSON.stringify(data?.user)}</p>
-				<p>{JSON.stringify(error)}</p>
-			</div>
-			<button
-				onClick={() =>
-					authClient.signUp.email({
-						email: "test@test.com",
-						password: "teste111111",
-						name: "test",
-					})
-				}
-				type="button"
-			>
-				Sign Up
-			</button>
+			<button type="button">Sign Up</button>
 		</div>
 	);
 }

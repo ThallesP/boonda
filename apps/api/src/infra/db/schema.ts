@@ -7,3 +7,5 @@ export const filesTable = sqliteTable("files", {
 	createdAt: text("created_at"),
 	updatedAt: text("updated_at"),
 });
+
+export * from "../auth/AuthSchema";
